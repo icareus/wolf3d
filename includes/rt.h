@@ -6,7 +6,7 @@
 /*   By: abarbaro <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/05/22 23:47:25 by abarbaro          #+#    #+#             */
-/*   Updated: 2014/05/23 14:27:04 by rcharles         ###   ########.fr       */
+/*   Updated: 2014/11/04 00:00:37 by abarbaro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,9 +32,9 @@
 
 typedef struct	s_xyz
 {
-	int			x;
-	int			y;
-	int			z;
+	int		x;
+	int		y;
+	int		z;
 }				t_xyz;
 
 /*
@@ -57,6 +57,7 @@ typedef struct	s_env
 	void		*img;
 	t_xyz		img_format;
 	char		*img_start;
+	t_xyz		camera;
 }				t_env;
 
 /*

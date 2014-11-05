@@ -6,22 +6,12 @@
 /*   By: abarbaro <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/09/17 02:47:47 by abarbaro          #+#    #+#             */
-/*   Updated: 2014/10/03 16:04:47 by abarbaro         ###   ########.fr       */
+/*   Updated: 2014/11/03 21:17:16 by abarbaro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdarg.h>
 #include "libft.h"
-
-static int		ft_nbrlen(int i)
-{
-	int		ret;
-
-	ret = IS_NEG(i) + 1;
-	while ((i /= 10))
-		ret++;
-	return (ret);
-}
 
 static int		pr_check_format(char *form)
 {
@@ -31,10 +21,7 @@ static int		pr_check_format(char *form)
 	while (form[i])
 	{
 		if (form[i] == '%' && !(form[i + 1] || ft_strchr(PRINT_SET, form[i + 1])))
-		{
-			ft_putstr("Format error.");
 			return (-1);
-		}
 		i++;
 	}
 	return (0);
@@ -59,6 +46,8 @@ static int		pr_print_arg(char c, va_list va_l)
 		ret = ft_putstr(va_arg(va_l, char *));
 	else if (c == '%')
 		ret = write(1, "%", 1);
+	else if (c == 'f')
+		ret = ft_putflt((float)va_arg(va_l, double));
 	return (ret);
 }
 
