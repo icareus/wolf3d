@@ -24,6 +24,7 @@ int		ft_putflt(float f)
 	ft_putnbr(intpart);
 	ret = ft_nbrlen(intpart) + 8;
 	write(1, ".", 1);
+	f = ABS(f);
 	while (i++ < 7)
 	{
 		f *= 10;

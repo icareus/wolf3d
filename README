@@ -1,0 +1,8 @@
+Arrow : Move
+Escape : Quit
+
+Install :
+Make
+
+Run :
+./wolf3d

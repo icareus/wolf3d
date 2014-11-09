@@ -6,7 +6,7 @@
 /*   By: abarbaro <abarbaro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/27 01:46:16 by abarbaro          #+#    #+#             */
-/*   Updated: 2014/10/02 14:12:26 by abarbaro         ###   ########.fr       */
+/*   Updated: 2014/11/09 03:07:12 by abarbaro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,6 +66,7 @@ char		*ft_strmap(char const *s, char (*f)(char));
 char		*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 int			ft_strncmp(const char *s1, const char *s2, size_t n);
 char		**ft_strsplit(const char *s, char c);
+int			*ft_strsplittoint(char const *str, char c);
 int			ft_isalpha(int c);
 void		ft_ndl(int n);
 int			ft_isdigit(int c);

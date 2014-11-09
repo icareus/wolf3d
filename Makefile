@@ -6,13 +6,13 @@
 #    By: abarbaro <abarbaro@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2013/11/30 05:29:40 by abarbaro          #+#    #+#              #
-#    Updated: 2014/10/30 22:31:14 by abarbaro         ###   ########.fr        #
+#    Updated: 2014/11/09 22:44:51 by abarbaro         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = gcc
 CFLAGS = -Wall -Werror -Wextra
-LXFLAGS = -L/usr/X11/lib -lmlx -lXext -lX11
+XFLAGS = -L/usr/X11/lib -lmlx -lXext -lX11
 NAME = wolf3d
 LIBDIR = ./libft/
 LIB = $(LIBDIR)libft.a
@@ -31,7 +31,7 @@ all: $(LIB) $(NAME)
 $(NAME): objects
 	@$(BLU)
 	@echo "Making $(NAME)..."
-	@$(CC) $(addprefix $(ODIR),$(SRCO)) -o $(NAME) $(LXFLAGS) -L$(LIBDIR) -lft
+	@$(CC) $(addprefix $(ODIR),$(SRCO)) -o $(NAME) -L$(LIBDIR) -lft $(XFLAGS)
 	@$(WHT)
 	@echo "$(NAME) done."
 	@$(NOCOLOR)
@@ -39,7 +39,7 @@ $(NAME): objects
 objects:
 	@$(BLU)
 	@echo "Making objects..."
-	@$(CC) $(CFLAGS) -c $(SRC) -I $(LIBDIR)includes -I $(SRCDIR)
+	@$(CC) $(CFLAGS) -c $(SRC) -I $(LIBDIR)includes
 	@mkdir -p $(ODIR)
 	@mv $(SRCO) $(ODIR)
 	@$(WHT)
