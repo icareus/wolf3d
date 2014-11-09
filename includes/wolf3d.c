@@ -44,6 +44,7 @@ static void	readmap(t_env *e, int fd)
 	while (get_next_line(fd, &line) > 0)
 	{
 		worldmap[i] = ft_strsplittoint(line, ' ');
+		free(line);
 		i++;
 	}
 	e->map.map = worldmap;
