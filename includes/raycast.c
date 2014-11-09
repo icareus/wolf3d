@@ -12,8 +12,6 @@
 
 #include "wolf.h"
 #include <libft.h>
-#include <mlx.h>
-//#include <X.h>
 #include <math.h>
 
 static void		initray(t_env *e, int x)

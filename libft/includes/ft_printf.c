@@ -6,7 +6,7 @@
 /*   By: abarbaro <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/09/17 02:47:47 by abarbaro          #+#    #+#             */
-/*   Updated: 2014/11/03 21:17:16 by abarbaro         ###   ########.fr       */
+/*   Updated: 2014/11/09 23:03:08 by abarbaro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,8 @@ static int		pr_check_format(char *form)
 	i = 0;
 	while (form[i])
 	{
-		if (form[i] == '%' && !(form[i + 1] || ft_strchr(PRINT_SET, form[i + 1])))
+		if (form[i] == '%' &&
+				!(form[i + 1] || ft_strchr(PRINT_SET, form[i + 1])))
 			return (-1);
 		i++;
 	}

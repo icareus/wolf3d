@@ -1,9 +1,19 @@
-#include <stdlib.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   wolf3d.c                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: abarbaro <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2014/11/09 23:06:11 by abarbaro          #+#    #+#             */
+/*   Updated: 2014/11/09 23:07:00 by abarbaro         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <sys/types.h>
 #include <sys/stat.h>
-#include <fcntl.h>
 #include <sys/time.h>
-#include <unistd.h>
+#include <fcntl.h>
 #include <libft.h>
 #include "wolf.h"
 

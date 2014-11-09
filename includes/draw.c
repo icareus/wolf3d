@@ -6,13 +6,13 @@
 /*   By: abarbaro <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/09 22:28:10 by abarbaro          #+#    #+#             */
-/*   Updated: 2014/11/09 22:28:29 by abarbaro         ###   ########.fr       */
+/*   Updated: 2014/11/09 23:03:43 by abarbaro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "wolf.h"
 #include <mlx.h>
-#include <libft.h> 
+#include <libft.h>
 
 static void	set_colors(t_rgb *c, int r, int g, int b)
 {

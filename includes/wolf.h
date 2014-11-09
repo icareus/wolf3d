@@ -1,5 +1,17 @@
-#ifndef WOLF3D_H
-# define WOLF3D_H
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   wolf.h                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: abarbaro <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2014/11/09 23:04:26 by abarbaro          #+#    #+#             */
+/*   Updated: 2014/11/09 23:04:45 by abarbaro         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#ifndef WOLF_H
+# define WOLF_H
 
 # define WIN_HEIGH 720
 # define WIN_WIDTH 1280
@@ -90,13 +102,13 @@ typedef struct	s_env
 	long int	frametime;
 }				t_env;
 
-void	get_timeframe(t_env *e);
-int		expose_hook(t_env *t);
-int		loop_hook(t_env *e);
-int		key_release(int keycode, t_env *e);
-int		key_press(int keycode, t_env *e);
-void	move(t_env *e);
-void	colors(t_env *e, t_rgb *c);
-void	drawline(int x, t_env *e, t_rgb *c);
+void			get_timeframe(t_env *e);
+int				expose_hook(t_env *t);
+int				loop_hook(t_env *e);
+int				key_release(int keycode, t_env *e);
+int				key_press(int keycode, t_env *e);
+void			move(t_env *e);
+void			colors(t_env *e, t_rgb *c);
+void			drawline(int x, t_env *e, t_rgb *c);
 
 #endif
