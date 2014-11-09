@@ -27,6 +27,8 @@ static void	readsize(t_env *e, int fd)
 	size = ft_strsplittoint(line, ' ');
 	e->map.sizex = size[0];
 	e->map.sizey = size[1];
+	free(line);
+	free(size);
 }
 
 static void	readmap(t_env *e, int fd)
